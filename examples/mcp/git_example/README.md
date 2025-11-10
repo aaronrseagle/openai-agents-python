@@ -16,7 +16,7 @@ The example uses the `MCPServerStdio` class from `agents.mcp`, with the command:
 uvx mcp-server-git
 ```
 
-Prior to running the agent, the user is prompted to provide a local directory path to their git repo. Using that, the Agent can invoke Git MCP tools like `git_log` to inspect the git commit log.
+Prior to running the agent, the user is prompted to provide a local directory path to their git repo. Using that, the Agent can invoke Git MCP tools like `git_log` to inspect the git commit log and `git_status` to check for unstaged or untracked files.
 
 Under the hood:
 

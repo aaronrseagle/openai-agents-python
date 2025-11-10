@@ -24,6 +24,12 @@ async def run(mcp_server: MCPServer, directory_path: str):
     result = await Runner.run(starting_agent=agent, input=message)
     print(result.final_output)
 
+    message = "Check the git status. Are there any unstaged or untracked files that could be added with 'git add .'?"
+    print("\n" + "-" * 40)
+    print(f"Running: {message}")
+    result = await Runner.run(starting_agent=agent, input=message)
+    print(result.final_output)
+
 
 async def main():
     # Ask the user for the directory path
