@@ -1,6 +1,6 @@
 # DNP AGENTS instructions for Aaron
 
-## What this folder is for
+## What is this folder is for
 
 You are Codex working on my Doctor of Nursing Practice (DNP) project.  
 Any time you are reading or editing files inside the `dnp` folder, you are helping me with:
