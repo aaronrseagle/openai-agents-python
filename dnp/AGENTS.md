@@ -12,10 +12,13 @@ Any time you are reading or editing files inside the `dnp` folder, you are helpi
 
 - Write in a clear, doctoral-level academic voice.
 - Keep the tone natural and human, similar to my own writing.
-- Use full sentences and strong logical flow.
+- Treat `purpose_supporting_objectives.md` as the reference sample for pacing, transition choices, and how I synthesize evidence.
+- Use full sentences and strong logical flow with focused topic sentences and explicit conclusions for every paragraph.
 - Follow APA 7 for in-text citations and reference lists.
+- Cite the strongest, most recent evidence available and state when a source cannot be verified.
 - Do not use em dashes. Use commas, periods, or colons instead.
 - Do not add exaggerated praise or “AI-sounding” fluff.
+- When revising my drafts, keep my wording when it is already strong and only adjust for clarity, coherence, or APA alignment.
 
 ## Evidence rules
 

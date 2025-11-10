@@ -28,6 +28,7 @@ Check out a variety of sample implementations of the SDK in the examples section
     -   Usage tracking
     -   Non-strict output types
     -   Previous response ID usage
+    -   Loading on-disk writing instructions (see `examples/basic/dnp_voice_prompt.py`)
 
 -   **[customer_service](https://github.com/openai/openai-agents-python/tree/main/examples/customer_service):**
     Example customer service system for an airline.
