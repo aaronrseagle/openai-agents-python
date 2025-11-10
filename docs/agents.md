@@ -147,6 +147,32 @@ agent = Agent[UserContext](
 )
 ```
 
+### Embedding writing-style guardrails
+
+When you need an agent to consistently follow a house writing style, combine persistent instructions with on-disk exemplars. In this repository we keep long-form guidance in `AGENTS.md` files alongside reference drafts such as `dnp/purpose_supporting_objectives.md`. At run time we can load those resources and reinforce the expectations in the agent's instructions.
+
+```python
+from pathlib import Path
+
+from agents import Agent
+
+def load_dnp_voice() -> str:
+    base_instructions = Path("dnp/AGENTS.md").read_text()
+    exemplar = Path("dnp/purpose_supporting_objectives.md").read_text()
+    return (
+        "Follow the doctoral-level style defined in these house instructions:\n\n"
+        f"{base_instructions}\n\nReference the tone and paragraph structure from this sample section:\n\n"
+        f"{exemplar}"
+    )
+
+editor_agent = Agent(
+    name="DNP editor",
+    instructions=load_dnp_voice(),
+)
+```
+
+By grounding the agent in the same instructions and exemplar documents that humans use, you reduce the chance of drifting toward generic or mechanical prose. You can extend this pattern by adding safety reminders, required citation styles, or checklists before the agent returns a draft. A runnable reference is included at `examples/basic/dnp_voice_prompt.py`.
+
 ## Lifecycle events (hooks)
 
 Sometimes, you want to observe the lifecycle of an agent. For example, you may want to log events, or pre-fetch data when certain events occur. You can hook into the agent lifecycle with the `hooks` property. Subclass the [`AgentHooks`][agents.lifecycle.AgentHooks] class, and override the methods you're interested in.
